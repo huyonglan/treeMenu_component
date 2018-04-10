@@ -1,0 +1,247 @@
+@import '../base';
+
+// mod_tree_menu
+.mod_tree_menu{
+    box-sizing: border-box;
+	li{
+		padding: 0;
+		margin: 0;
+		line-height: 24px;
+		font-size: 14px;
+
+		input{
+			outline: none;
+		}
+
+		&.sub_item{
+			/*padding-left:38px;*/
+			padding-left:18px;
+		}
+
+		.item_tit{
+			position: relative;
+		}
+		
+		label{
+			float:none;
+			width: auto;
+			text-align: left;
+		}
+
+		.chk, .ico_arrow, label{
+			vertical-align: middle;
+		}
+
+		.ico_arrow{
+			position: absolute;
+			left: -16px;
+			top:10px;
+			width: 0;
+			height: 0;
+			border-width: 6px;
+			border-style: dashed;
+			border-color: #868686 transparent transparent transparent;
+			cursor: pointer;
+			transition: .3s all;
+
+			&.ico_arrow_hide{
+				transform: rotate(-90deg);
+				transform-origin: 6px 3px;
+			}
+		}
+	}
+}
+
+// mod_tree_menu
+.mod_tree_manage{
+    box-sizing: border-box;
+	li{
+		padding: 0;
+		margin: 0;
+		line-height: 24px;
+		margin-bottom: 8px;
+
+		.item_tit{
+			margin-bottom: 8px;
+			position: relative;
+		}
+
+		input, .dis_put{
+			text-indent: 0.5em;
+			vertical-align: top;
+			border: 1px solid #CDCDCD;
+			height: 22px;
+			padding: 2px;
+			color: #333333;
+			outline: none;
+			width: 180px;
+			float: left;
+
+			&:focus{
+				border-color: #333333;
+			}
+		}
+
+		&.sub_item{
+			/*padding-left:38px;*/
+			padding-left: 18px;
+		}
+		
+		label{
+			float:none;
+			width: auto;
+			text-align: left;
+		}
+
+		.chk, .ico_arrow, label{
+			vertical-align: middle;
+		}
+
+		.ico_arrow{
+			/*float:left;*/
+			/*margin: 10px 6px 0 0;*/
+			position: absolute;
+			left: -16px;
+			top: 12px;
+			width: 0;
+			height: 0;
+			border-width: 6px;
+			border-style: dashed;
+			border-color: #868686 transparent transparent transparent;
+			cursor: pointer;
+			transition: .3s all;
+
+			&.ico_arrow_hide{
+				transform: rotate(-90deg);
+				transform-origin: 6px 3px;
+			}
+		}
+	}
+
+	.ico{
+		font-weight: 700;
+		font-size: 16px;
+		cursor: pointer;
+		margin-left:3px;
+	}
+}
+
+// mod_tree_file
+.mod_tree_file{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #FFFFFF;
+
+	&:last-child{
+		border: none;
+	}
+
+	.node_tit{
+		line-height: 36px;
+		height: 36px;
+		text-indent: 26px;
+		font-size:14px;
+		color:#FFFFFF;
+		cursor: pointer;
+		background:#8AB9FF;
+		@extend %text-ellipsis;
+
+		&.focus{
+			font-weight:700;
+		}
+	}
+	
+	.menu_list{
+		box-sizing: border-box;
+		padding-left: 18px;
+	}
+
+	ul{
+		background: url(../../images/systemSearch/vline1.png) 8px repeat-y #579BFE;
+	}
+
+	li{
+		padding: 0;
+		margin: 0;
+		line-height: 24px;
+		font-size: 14px;
+		color: #FFFFFF;
+		background: url(../../images/systemSearch/line.png) 8px 12px no-repeat;
+
+		.ico_arrow{
+			width: 20px;
+			height: 24px;
+			background: url(../../images/systemSearch/ico_main.png) -25px -20px no-repeat #579BFE;
+			float: left;
+			margin-left:2px;
+			cursor: pointer;
+
+			&.ico_arrow_file{
+				width: 18px;
+				background-position: -48px -20px;
+			}
+		}
+
+		&.sub_item{
+			padding-left:18px;
+		}
+
+		&.sub_item_last{
+			background: url(../../images/systemSearch/last_line.png) 8px 0 no-repeat #579BFE;
+		}
+
+		.item_tit{
+			position: relative;
+			height: 24px;
+			overflow: hidden;
+			display:block;
+		}
+		
+		label, a{
+			width: 102px;
+			text-align: left;
+			@extend %text-ellipsis;
+			vertical-align: middle;
+			display:inline-block;
+			cursor: pointer;
+			text-decoration: none;
+
+			&.cur{
+				/*color: rgb(243, 249, 18);*/
+				font-weight: 700;
+			}
+		}
+
+
+		&.tree_level_1{
+			label, a{
+				width: 138px;
+			}
+		}
+
+		&.tree_level_2{
+			label, a{
+				width: 120px;
+			}
+		}
+
+		&.tree_level_3{
+			label, a{
+				width: 102px;
+			}
+		}
+
+		&.tree_level_4{
+			label, a{
+				width: 120px;
+			}
+		}
+
+		&.tree_level_5{
+			label, a{
+				width: 138px;
+			}
+		}
+
+	}
+}
+
